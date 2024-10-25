@@ -1,0 +1,45 @@
+// Script File Name : nvram.txt
+// Created on 10/19/24 at 21:06:39    
+// AMISCE Utility. Ver 5.05.01.0002
+// Copyright (c) 2021 AMI. All rights reserved.
+HIICrc32= FDF24D09
+
+Setup Question	= CPU Revision
+Help String	= 0-Bristol, 1-Summit, 2-Raven, 3-Pinnacle
+Token	=02	// Do NOT change this line
+Offset	=00
+Width	=01
+Options	=[00]0	// Move "*" to the desired Option
+         [01]1
+         [02]2
+         [03]3
+         [04]1
+
+Setup Question	= SMT Mode
+Help String	= Enable/Disable SMT.
+Token	=39	// Do NOT change this line
+Offset	=14E
+Width	=01
+BIOS Default	=[01]Auto 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Auto
+
+Setup Question	= Global C-state Control
+Help String	= Controls IO based C-state generation and DF C-states.
+Token	=32	// Do NOT change this line
+Offset	=149
+Width	=01
+BIOS Default	=[03]Auto 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+         [03]Auto
+
+Setup Question	= Chipset Power Saving Features
+Help String	= Chipset Power Saving Features
+Token	=239	// Do NOT change this line
+Offset	=BA
+Width	=01
+BIOS Default	=[01]Enabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
